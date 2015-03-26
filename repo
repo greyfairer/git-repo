@@ -21,7 +21,7 @@ if sys.version_info[0] < 3:
 
 ## repo default configuration
 ##
-REPO_URL = 'https://github.com/esrlabs/git-repo'
+REPO_URL = 'https://github.com/greyfairer/git-repo'
 REPO_REV = 'master'
 
 # Copyright (C) 2008 Google Inc.
