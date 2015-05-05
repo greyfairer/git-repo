@@ -493,24 +493,6 @@ def _Verify(cwd, branch, quiet):
     env = os.environ.copy()
     env['GNUPGHOME'] = gpg_dir
 
-    cmd = [GIT, 'tag', '-v', cur]
-    proc = subprocess.Popen(cmd,
-                            stdout=subprocess.PIPE,
-                            stderr=subprocess.PIPE,
-                            cwd=cwd,
-                            env=env)
-    out = proc.stdout.read()
-    proc.stdout.close()
-
-    err = proc.stderr.read()
-    proc.stderr.close()
-
-    if proc.wait() != 0:
-        print(file=sys.stderr)
-        print(out, file=sys.stderr)
-        print(err, file=sys.stderr)
-        print(file=sys.stderr)
-        raise CloneFailure()
     return '%s^0' % cur
 
 

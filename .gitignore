@@ -4,3 +4,4 @@ workspace.xml
 *.pyc
 .repopickle_*
 .work
+.idea/
